@@ -1,12 +1,33 @@
+import org.junit.jupiter.api.Test;
+
 import static java.lang.System.out;
 import static org.junit.jupiter.api.Assertions.*;
 
+
 class mashinTestTest {
+    @Test
+    void Mashin_Bayad_Harkat_Konad() {
+        /*Mashin mashin = new Mashin();
+        mashin.mashinRoshanast();
+        mashin.darMashinBasteAst();
+        out.println("dar mashin baz ast?"+mashin.ayaDarMashinBazAst);
+        out.println(-----------------------------------);*/
+
+        Mashin benz = new Mashin("Benz");
+        benz.darMashinBazAst();
+        benz.harkatMashin();
+        boolean ayaMashinRoshanAst = benz.ayaMashinRoshanAst;
+    }
+
     class Mashin{
         boolean ayaMashinRoshanAst;
         boolean ayaDarMashinBazAst;
-        double tol;
-        double arz;
+        String Mark;
+
+
+        Mashin(String Mark){
+            this.Mark=Mark;
+        }
 
         void mashinRoshanast(){
             out.println("mashin roshan ast");
